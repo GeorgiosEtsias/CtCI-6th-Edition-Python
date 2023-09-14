@@ -12,7 +12,7 @@ def is_unique_chars_algorithmic(string):
     #  careful though it won't work for a doubly nested array
     char_set = [False] * 128
     for char in string:
-        val = ord(char)
+        val = ord(char)         #GE: unique python function / returns the Unicode code from a given character/ where ord('a') = 98
         if char_set[val]:
             # Char already found in string
             return False
@@ -22,7 +22,7 @@ def is_unique_chars_algorithmic(string):
 
 
 def is_unique_chars_pythonic(string):
-    return len(set(string)) == len(string)
+    return len(set(string)) == len(string) #GE: set() method is used to convert any of the iterable to sequence of iterable elements with distinct elements
 
 
 def is_unique_bit_vector(string):
