@@ -21,10 +21,10 @@ def is_palindrome_permutation(phrase):
             else:
                 countodd -= 1
 
-    return countodd <= 1
+    return countodd <= 1 #GE: returns the result at onve without scanning the string counts one last time, clever
 
 
-def char_number(c):
+def char_number(c): #GE: this is how he is getting rid of the capital letters, clever / I used a more complex way!
     a = ord("a")
     z = ord("z")
     upper_a = ord("A")
