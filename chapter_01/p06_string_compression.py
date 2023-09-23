@@ -6,7 +6,7 @@ def compress_string(string):
     compressed = []
     counter = 0
 
-    for i in range(len(string)):  # noqa
+    for i in range(len(string)):  # noqa  #GE: we have said many times that ython strings are immutable. Thus the solution uses a list that it appends instead of concstting a string!
         if i != 0 and string[i] != string[i - 1]:
             compressed.append(string[i - 1] + str(counter))
             counter = 0
@@ -17,7 +17,7 @@ def compress_string(string):
         compressed.append(string[-1] + str(counter))
 
     # returns original string if compressed string isn't smaller
-    return min(string, "".join(compressed), key=len)
+    return min(string, "".join(compressed), key=len) # GE: in the final step the list becomes a string to avoid high time complexities
 
 
 class Test(unittest.TestCase):
