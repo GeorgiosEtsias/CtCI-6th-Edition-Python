@@ -20,7 +20,7 @@ def rotate_matrix(matrix):
             matrix[-i - 1][layer] = matrix[-layer - 1][-i - 1]  # GE: it uses negative indices this is not correct, it should be re-written I think.
 
             # right -> bottom
-            matrix[-layer - 1][-i - 1] = matrix[i][-layer - 1]
+            matrix[-layer - 1][-i - 1] = matrix[i][-layer - 1] # GE: -layer-1 should be reaced by n-layer-1 and so on everywhere
 
             # top -> right
             matrix[i][-layer - 1] = top
