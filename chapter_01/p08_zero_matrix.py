@@ -3,7 +3,7 @@ import unittest
 from copy import deepcopy
 
 
-def zero_matrix(matrix):
+def zero_matrix(matrix):  #GE: i solved my code almost identically, but adding cases for early termination, chatGPT thinks that this code is simpler, thus better
     m = len(matrix)
     n = len(matrix[0])
     rows = set()
