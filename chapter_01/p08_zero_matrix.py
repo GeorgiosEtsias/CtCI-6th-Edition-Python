@@ -6,8 +6,8 @@ from copy import deepcopy
 def zero_matrix(matrix):  #GE: i solved my code almost identically, but adding cases for early termination, chatGPT thinks that this code is simpler, thus better
     m = len(matrix)
     n = len(matrix[0])
-    rows = set()
-    cols = set()
+    rows = set() # GE: they created an array, add to the array 1 element has O(1) it is not considered to have the same big O probelm as appending a string. 
+    cols = set() #GE: adding N elements on a set is O(n) adding N elements on a string or list is O(N^2)
 
     for x in range(m):
         for y in range(n):
